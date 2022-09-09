@@ -1,7 +1,7 @@
 import { CardActionArea } from "@mui/material";
 import { useState, useEffect } from "react";
 
-const Food = () => {
+const FoodList = () => {
   const [foods, setFoods] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -21,6 +21,7 @@ const Food = () => {
 
   return (
     <div>
+    
       {!isLoading &&
         foods.results.map((food) => (
           <CardActionArea>
@@ -31,4 +32,4 @@ const Food = () => {
     </div>
   );
 };
-export default Food;
+export default FoodList;
