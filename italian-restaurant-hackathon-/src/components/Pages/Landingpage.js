@@ -1,10 +1,12 @@
 import Footer from "../footer";
 import "../app/App.css";
+import Navbar from "../Navbar/Navbar";
 
 const Layout = () => {
   return (
     <div className="App">
-    <Footer></Footer>
+        <Navbar/>
+    <Footer/>
   </div>
   );
 };
