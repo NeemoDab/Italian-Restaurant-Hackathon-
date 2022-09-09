@@ -1,8 +1,9 @@
-
+import Footer from "../footer";
 import "../app/App.css";
+import Navbar from "../Navbar/Navbar";
+import { Outlet } from "react-router-dom";
 
-
-const Menu = () => {
+const Layout = () => {
   return (
 <div>
 <p>Hello</p>
@@ -20,3 +21,4 @@ const Menu = () => {
 };
 
 export default Menu;
+
