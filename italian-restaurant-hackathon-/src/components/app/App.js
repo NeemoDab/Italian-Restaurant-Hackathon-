@@ -1,11 +1,9 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "../Pages/Landingpage"
 import Menu from "../Pages/Menu"
-export default function App() {
 
+export default function App() {
   return (
-  
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
