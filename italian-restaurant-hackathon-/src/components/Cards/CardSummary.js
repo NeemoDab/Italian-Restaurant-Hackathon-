@@ -16,7 +16,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
 function numberToSterling (num) {
-    return '£' + num.toFixed(2)
+    return '£' + Number(num).toFixed(2)
 }
 
 export default function CardSummary({image, title, price, inBasket, modalData}) { 
