@@ -1,4 +1,4 @@
-import FoodList from '../Cards/CardSummary.js'
+import FoodList from '../FoodList/FoodList.js'
 import "../app/App.css";
 
 
