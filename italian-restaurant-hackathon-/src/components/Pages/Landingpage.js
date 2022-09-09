@@ -8,7 +8,6 @@ import Darkmode from "../Darkmode/Darkmode";
 
 const Layout = () => {
   return (
-
     <div className="App">
         <Navbar/>
         <Darkmode/>

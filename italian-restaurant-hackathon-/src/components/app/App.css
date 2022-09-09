@@ -32,3 +32,13 @@ padding-top: 0.2%;
 position: absolute;
 right: 2%;
 }
+
+.shoppingListTable{
+  padding-left: 10%;
+  padding-right: 5%;
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80vw;
+}
