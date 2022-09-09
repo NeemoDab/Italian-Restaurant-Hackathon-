@@ -1,11 +1,14 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "../Pages/Landingpage"
 
-import './App.css';
+export default function App() {
 
-function App() {
   return (
-    <div className="App">
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
