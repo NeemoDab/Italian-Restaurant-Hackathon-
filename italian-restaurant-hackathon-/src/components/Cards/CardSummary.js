@@ -3,39 +3,41 @@
 - props can be image, title, price, if we need to include an 'X' to remove item, and the props to pass to get a detailed modal up
 - Layout is image, then title and cost below.
   - The tile should be a link to a modal, which comes up with more details about meal
-- An API should
+- An API should provide the details on another component
 */
 
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
+//import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+//import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
 
-export default function CardSummary({key, image, title, price, inBasket, modalData}) {
+function numberToSterling (num) {
+    return '£' + num.toFixed(2)
+}
+
+export default function CardSummary({image, title, price, inBasket, modalData}) { 
   return (
     <Card sx={{ maxWidth: 345 }}>
+    <CardActionArea>
       <CardMedia
         component="img"
         height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
-        alt="green iguana"
+        image={image}
+        alt={title}
       />
-      <CardContent>
+      <CardContent sx={{ display: 'flex', justifyContent: 'space-around'}}>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+        <Typography gutterBottom variant="h5" component="div">
+          {numberToSterling(price)}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+      </CardActionArea>
     </Card>
   );
 }
