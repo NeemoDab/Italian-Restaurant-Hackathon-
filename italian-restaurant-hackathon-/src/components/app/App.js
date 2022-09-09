@@ -1,12 +1,14 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "../Pages/Landingpage"
 
-import './App.css';
-import Footer from '../footer';
-function App() {
+export default function App() {
+
   return (
-    <div className="App">
-      <Footer></Footer>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
