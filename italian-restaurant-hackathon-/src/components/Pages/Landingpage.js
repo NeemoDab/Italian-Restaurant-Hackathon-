@@ -1,6 +1,9 @@
 import Footer from "../footer";
 import "../app/App.css";
 import Navbar from "../Navbar/Navbar";
+import { Outlet } from "react-router-dom";
+
+
 import Darkmode from "../Darkmode/Darkmode";
 
 const Layout = () => {
@@ -8,8 +11,9 @@ const Layout = () => {
     <div className="App">
         <Navbar/>
         <Darkmode/>
+        <Outlet /> 
     <Footer/>
-  </div>
+  </body>
   );
 };
 
