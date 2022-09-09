@@ -3,7 +3,7 @@ import "../app/App.css";
 import Navbar from "../Navbar/Navbar";
 import { Outlet } from "react-router-dom";
 
-const Layout = () => {
+const Menu = () => {
   return (
 <div>
 <p>Hello</p>
