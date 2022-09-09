@@ -14,6 +14,12 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Badge from '@mui/material/Badge';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({ palette: {
+  primary: { main : "#1BB145"},
+   error : { main : "#FFAC1C"}
+ } }) 
 
 
 const pages = ['Menu'];
@@ -38,7 +44,8 @@ export default function Navbar() {
   };
 
   return (
-    <AppBar position="static" style={{background: '#1BB145'}}>
+    <ThemeProvider theme={theme}>
+    <AppBar position="sticky" style={{background: '#1BB145'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -137,5 +144,6 @@ export default function Navbar() {
         </Toolbar>
       </Container>
     </AppBar>
+    </ThemeProvider>
   );
 }
